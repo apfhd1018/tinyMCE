@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./templates/Header";
+import Footer from "./templates/Footer";
+import Home from "./components/Home";
+import Team from "./components/Team";
+import Contact from "./components/Contact";
+import Support from "./components/Support";
+import { Link, Route } from "react-router-dom";
 
-function App() {
+// ========================
+//       렌더링 영역
+// ========================
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Route path="/" exact={true} component={Home}></Route>
+      <Route path="/team" component={Team}></Route>
+      <Route path="/contact" component={Contact}></Route>
+      <Route path="/support" component={Support}></Route>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,38 +1,635 @@
-.App {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: #000;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.sub-title {
+  color: #8f8e8e;
+  font-size: 16px;
+}
+.container {
+  padding: 80px 30px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --------------button------------ */
+.btn-white {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 6px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #1976d2;
+  transition: all 0.2s;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-white:hover {
+  color: #1976d2;
+  background: #fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-navy {
+  color: #fff;
+  border: 1px solid #1976d2;
+  border-radius: 3px;
+  background: #1976d2;
+  padding: 7px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+.btn-navy:hover {
+  background: rgb(20, 92, 164);
+}
+/* ######### FEATURE 페이지 ########## */
+/* ------feature-header------ */
+.feature-header-container {
+  border-bottom: 1px solid #d6d3d3;
+  padding: 10px 30px;
+}
+.feature-header-nav-container {
+  padding: 16px 30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 10%;
+  z-index: 5;
+}
+.nav-list {
+  display: flex;
+}
+.feature-header-nav-container a {
+  margin-right: 21px;
+  color: #4a4a4a;
+  font-weight: 900;
+  font-size: 16px;
+}
+.feature-header-underline-left a {
+  color: rgb(25, 118, 210);
+  transition: all 0.2s;
+}
+.feature-header-underline-left a:hover {
+  color: rgb(25, 118, 210);
+  text-decoration: underline;
+}
+.feature-header-underline-right a {
+  font-weight: bold;
+}
+.feature-header-underline-right a:hover {
+  color: rgb(25, 118, 210);
+}
+.feature-header-top-right {
+  color: #000;
+}
+.font-blue a {
+  transition: all 0.2s;
+}
+.font-blue a:hover {
+  color: rgb(25, 118, 210);
+}
+.feature-header {
+  position: relative;
+}
+.feature-navigation {
+  position: absolute;
+  height: 300px;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+}
+.feature-navigation p {
+  margin-top: 30px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+.feature-navigation a {
+  color: rgb(74 73 73);
+}
+.feature-navigation a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+/* ------feature-main------- */
+.feature-main-container {
+  background-image: linear-gradient(
+      90deg,
+      #1976d2 calc(100% - 1120px),
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("https://www.tiny.cloud/static/gradient-hero-v3-61207a6a2d6370f530232d8bfb22161f.svg");
+  background-repeat: no-repeat;
+  padding: 100px 10px 130px;
+  text-align: center;
+  color: #fff;
+}
+.feature-main-container h1 {
+  font-size: 80px;
+  margin-top: 20px;
+  color: #fff;
+}
+.feature-main-container button {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 6px 100px;
+  font-size: 22px;
+  background-color: #fff;
+  color: #1b78d1;
+  margin-top: 20px;
+  transition: all 0.2s;
+}
+.feature-main-container button:hover {
+  background: #e6e6e6;
+  border-color: #e6e6e6;
+}
+/* ------feature-GetStarted------ */
+.feature-getStarted {
+  padding: 80px 30px;
+  text-align: center;
+}
+.feature-getStarted-list {
+  padding: 0 110px;
+}
+.feature-getStarted img {
+  width: 200px;
+  height: auto;
+}
+/* -----GetStarted2------ */
+.feature-getStarted2 {
+  background-color: #f0f0f0;
+}
+.feature-getStarted2 img {
+  width: 140px;
+  height: auto;
+  margin-top: 50px;
+}
+/* -----GetStarted3------ */
+
+.feature-getStarted3 img {
+  width: 200px;
+  height: auto;
+}
+/* ------premium------- */
+.feature-premium {
+  background-color: #f0f0f0;
+}
+.feature-premium img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+/* ----------question--------- */
+.feature-question {
+  color: #ffffff;
+  background-color: #1976d2;
+}
+/* -------environment--------- */
+.feature-environment img {
+  width: 140px;
+  height: auto;
+}
+/* ---------flexible--------- */
+.feature-flexible {
+  color: #ffffff;
+  background-color: #1976d2;
+}
+.feature-flexible img {
+  width: 120px;
+  height: auto;
+}
+.feature-flexible h3 {
+  color: #fff;
+  font-size: 50px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+/* ----------footer---------- */
+.feature-footer-top {
+  background-color: #2a2a2a;
+  background-image: linear-gradient(
+      90deg,
+      #252525 calc(100% - 70rem),
+      rgba(37, 37, 37, 0) 100%
+    ),
+    url("https://www.tiny.cloud/static/gradient-hero-v3-grey-fb08c0f2de3cb52a125182ad20209738.svg");
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.feature-footer-top a {
+  color: white;
+}
+.feature-footer-top img {
+  width: 64px;
+  height: auto;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+.feature-footer-top p {
+  font-size: 22px;
+  font-weight: bold;
+}
+.feature-footer-top a {
+  color: #b9b9b9;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.feature-footer-top a:hover {
+  color: #fff;
+}
+.feature-form input {
+  width: 60%;
+  font-size: 16px;
+  padding: 7px 6px;
+  margin-right: 14px;
+  border-radius: 3px;
+  border: 1px solid #d2d2d2;
+  background: #ffffff;
+  color: #212121;
+}
+.feature-footer-btm {
+  background-color: #000000;
+  padding: 40px 190px;
+}
+.feature-footer-btm-first a {
+  color: #b9b9b9;
+  transition: all 0.2s;
+}
+.feature-footer-btm-first a:hover {
+  color: rgba(74, 74, 74, 0.75);
+}
+.feature-footer-icon-list a {
+  margin-right: 12px;
+  font-size: 26px;
+}
+.footer-terms-a {
+  font-size: 17px;
+  padding: 0 10px;
+  border-right: 1px solid rgba(185, 185, 185, 0.25);
+  font-weight: bold;
+}
+.footer-terms-a:nth-child(3) {
+  border-right: none;
+}
+.feature-footer-inc {
+  color: rgba(185, 185, 185, 0.75);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ######### SUPPORT 페이지########### */
+/* -------support-header------ */
+
+.support-header {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+.support-header-container {
+  padding: 18px 30px 18px 10px;
+  border-bottom: 1px solid #d2d2d2;
+}
+.support-header img {
+  width: 200px;
+  height: auto;
+}
+.support-header-right {
+  color: #2276d2;
+  font-size: 14px;
+  transition: all 0.2s;
+  font-weight: light;
+}
+.support-header-right:hover {
+  color: #2276d2;
+  text-decoration: underline;
+}
+/* ------support-looking------- */
+.support-looking {
+  width: 90%;
+  padding: 30px 4% 0 4%;
+  text-align: center;
+  margin: 0 auto;
+}
+.support-looking-top {
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 90px;
+}
+.support-looking-btm p {
+  color: #828282;
+  font-size: 16px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+/* ------support-version------- */
+.support-version {
+  width: 90%;
+  margin: 0 auto;
+  padding: 24px 4% 100px 4%;
+}
+.support-productList h3 {
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 900;
+  text-align: left;
+  border-bottom: 1px solid #d2d2d2;
+  margin-bottom: 0;
+}
+.support-tableCell {
+  padding: 16px 0;
+  border-bottom: 1px solid #d2d2d2;
+  color: #828282;
+  font-size: 16px;
+  font-weight: 400;
+}
+/* -------support-footer--------- */
+.support-footer {
+  padding-top: 30px;
+  background-color: #2b2b2b;
+}
+.support-footer-top {
+  padding: 0 5%;
+  font-size: 16px;
+  color: #a09f9f;
+}
+.support-footer-top a {
+  color: #e8e8e8;
+}
+.support-footer-top-left {
+  margin-left: 5%;
+}
+.support-footer-top-left a {
+  padding: 0 8px;
+  border-right: 1px solid #a09f9f;
+  transition: all 0.2s;
+}
+.support-footer-top-left a:hover {
+  text-decoration: underline;
+}
+.support-footer-top-left a:nth-child(3) {
+  border-right: none;
+}
+.support-footer-top-right {
+  margin-right: 5%;
+}
+.support-footer-top-right a {
+  margin: 0 10px;
+  transition: all 0.2s;
+}
+.support-footer-top-right a:hover {
+  text-decoration: underline;
+}
+.support-footer-middle {
+  padding: 0 5% 10px 5%;
+  color: #a09f9f;
+  margin-top: 26px;
+  margin-left: 5%;
+}
+.support-footer-btm {
+  text-align: right;
+  padding: 10px 15px;
+}
+.support-footer-btm a {
+  color: #a09f9f;
+  transition: all 0.2s;
+}
+.support-footer-btm a:hover {
+  text-decoration: underline;
+}
+
+/* ######### TEAM 페이지 ######### */
+/* ------team-main----- */
+.team-main {
+  background-image: url("https://about.tiny.cloud/wp-content/uploads/2016/01/PA220378-1.jpg");
+  background-position: 50% -80px;
+}
+.team-main-container {
+  background-color: rgba(34, 118, 210, 0.8);
+  z-index: 2;
+}
+.team-main-box {
+  padding: 120px 0 70px;
+}
+.team-main-h1 {
+  font-size: 48px;
+  color: #fff;
+}
+.team-main-p {
+  margin-top: 8px;
+  opacity: 0.8;
+  color: #fff;
+  font-size: 17px;
+}
+/* -------team-story-------- */
+.team-story {
+  padding: 0 40px;
+  background-color: #ededed;
+}
+.team-story img {
+  width: 70%;
+  height: auto;
+}
+.team-story p {
+  color: #828282;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+/* -------team-member------- */
+.team-member {
+  padding: 80px 40px;
+}
+.team-member img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.team h1 {
+  font-size: 48px;
+  font-weight: 300;
+}
+.team-name {
+  color: rgb(136, 136, 136);
+  font-size: 18px;
+  margin-bottom: 0px;
+  margin-top: 12px;
+}
+.team-job {
+  font-size: 12px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+.team-member-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+/* ------team-join-------- */
+.team-join {
+  background-color: #2276d2;
+  padding: 80px 50px;
+}
+.team-join-left {
+  color: #fff;
+}
+.team-join-left h2 {
+  font-size: 36px;
+  font-weight: 200;
+  color: #fff;
+}
+.team-join-left p {
+  font-size: 16px;
+  font-weight: 300;
+}
+.team-join-right button {
+  background-color: #fff;
+  color: #222;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  padding: 8px 22px;
+  border-radius: 4px;
+  font-weight: 200;
+}
+/* ########contact######## */
+.contact-main {
+  background-color: #1976d2;
+  background-image: linear-gradient(
+      90deg,
+      #1976d2 calc(100% - 1120px),
+      rgba(25, 118, 210, 0) 100%
+    ),
+    url("https://www.tiny.cloud/static/gradient-hero-v3-61207a6a2d6370f530232d8bfb22161f.svg");
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 70px 0 140px 0;
+}
+.contact-main h1 {
+  font-size: 80px;
+  color: #fff;
+}
+/* -------contact-send------ */
+.contact-send {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTQ0MHB4IiBoZWlnaHQ9IjY2NnB4IiB2aWV3Qm94PSIwIDAgMTQ0MCA2NjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUxLjMgKDU3NTQ0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5UaW55IERyaXZlIHN0cmlwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxyZWN0IGlkPSJwYXRoLTEiIHg9IjAiIHk9IjAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9IjY2NiI+PC9yZWN0PgogICAgICAgIDxyZWN0IGlkPSJwYXRoLTMiIHg9IjAiIHk9Ii02OCIgd2lkdGg9IjE0NDAiIGhlaWdodD0iNzM0Ij48L3JlY3Q+CiAgICAgICAgPHBhdGggZD0iTTkwOC4zNTMzMTYsMTE2My43NjYxNCBMOTAzLjc5MzkzOSwxMTU5LjIwNjc3IEM4MzguMTg1ODU4LDEwOTMuNTk4NjkgODM4LjE4NTg1OCw5ODcuMjI2OTcgOTAzLjc5MzkzOSw5MjEuNjE4ODg5IEwxNzc2LjIwNDE1LDQ5LjIwODY3OTYgQzE4NDEuODEyMjMsLTE2LjM5OTQwMTUgMTk0OC4xODM5NSwtMTYuMzk5NDAxNSAyMDEzLjc5MjAzLDQ5LjIwODY3OTYgTDMyNjEuNzQ3LDEyOTcuMTYzNjUgQzMzMjcuMzU1MDgsMTM2Mi43NzE3MyAzMzI3LjM1NTA4LDE0NjkuMTQzNDUgMzI2MS43NDcsMTUzNC43NTE1MyBMMjM4OS4zMzY3OSwyNDA3LjE2MTc0IEMyMzIzLjcyODcxLDI0NzIuNzY5ODIgMjIxNy4zNTY5OSwyNDcyLjc2OTgyIDIxNTEuNzQ4OTEsMjQwNy4xNjE3NCBMMTc4NC4xMDMwMSwyMDM5LjUxNTg0IEw5MjUuNTQzNjMzLDI4OTguMDc1MjEgQzg1OS45MzU1NTIsMjk2My42ODMzIDc1My41NjM4MzUsMjk2My42ODMzIDY4Ny45NTU3NTQsMjg5OC4wNzUyMSBMNDkuNzkzOTM5MiwyMjU5LjkxMzQgQy0xNS44MTQxNDE4LDIxOTQuMzA1MzIgLTE1LjgxNDE0MTgsMjA4Ny45MzM2IDQ5Ljc5MzkzOTIsMjAyMi4zMjU1MiBMOTA4LjM1MzMxNiwxMTYzLjc2NjE0IFoiIGlkPSJwYXRoLTUiPjwvcGF0aD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJUaW55LURyaXZlLXN0cmlwZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Ikdyb3VwLTIiIG1hc2s9InVybCgjbWFzay00KSI+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTI1LjAwMDAwMCwgLTI0OS4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxtYXNrIGlkPSJtYXNrLTYiIGZpbGw9IndoaXRlIj4KICAgICAgICAgICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTUiPjwvdXNlPgogICAgICAgICAgICAgICAgPC9tYXNrPgogICAgICAgICAgICAgICAgPHVzZSBpZD0iQ29tYmluZWQtU2hhcGUiIHN0cm9rZT0ibm9uZSIgZmlsbD0iI0Y0RjRGNCIgZmlsbC1ydWxlPSJub256ZXJvIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjU1Ljc3MDQ2OSwgMTQ3My42NDE5NDcpIHNjYWxlKDEsIC0xKSB0cmFuc2xhdGUoLTE2NTUuNzcwNDY5LCAtMTQ3My42NDE5NDcpICIgeGxpbms6aHJlZj0iI3BhdGgtNSI+PC91c2U+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+}
+.contact-send-form {
+  padding: 60px 110px;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.05), 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+  margin: -120px auto 0 auto;
+  max-width: 840px;
+  border-radius: 4px;
+  text-align: center;
+}
+.contact-send-form h2 {
+  font-size: 30px;
+}
+.contact-send-form p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #8f8e8e;
+  margin-bottom: 50px;
+}
+.contact-callhover {
+  color: #1976d2;
+  font-weight: 600;
+}
+.contact-callhover:hover {
+  color: #1976d2;
+  text-decoration: underline;
+}
+.form-btn {
+  background: #1976d2;
+  border: none;
+  transition: 0.2s all;
+}
+.form-btn:hover {
+  background: rgb(20, 92, 164);
+}
+/* --------phone---------- */
+.contact-phone {
+  box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.15);
+}
+.contact-phone-icon {
+  font-size: 50px;
+  color: #1976d2d6;
+  border: 1px solid #d2d2d2;
+  padding: 20px;
+  border-radius: 70px;
+  font-weight: 100;
+}
+.contact-phone h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 14px;
+  color: #3e3e3e;
+}
+.contact-phone p {
+  color: #727272;
+  font-size: 16px;
+  max-width: 300px;
+  margin: 0 auto;
+  font-weight: 200;
+}
+.contact-phone-number {
+  font-weight: 900;
+  color: #1976d2;
+  font-size: 24px;
+}
+.contact-phone-number:hover {
+  color: #1976d2;
+}
+/* ---------map--------- */
+.contact-map {
+  padding: 60px 10px 120px 10px;
+  text-align: center;
+}
+.contact-map h2 {
+  font-weight: 600;
+  color: #3e3e3e;
+  font-size: 46px;
+  margin-bottom: 8px;
+}
+.contact-map-sub {
+  color: #8f8e8e;
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.contact-map-list {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.contact-map-list img {
+  width: 350px;
+  height: auto;
+}
+.contact-map-list h3 {
+  font-weight: 500;
+  color: #3e3e3e;
+  font-size: 26px;
+  margin-top: 14px;
+}
+.contact-map-list p {
+  color: #727272;
+  max-width: 240px;
+  margin: 0 auto;
+  font-size: 16px;
 }
